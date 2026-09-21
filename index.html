@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmed Borham — Engineering Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12302C;
+  --ink-soft:#2C4A45;
+  --paper:#EEF0EC;
+  --paper-2:#E4E8E3;
+  --rule:#C6CFC8;
+  --mute:#5C6E68;
+  --brass:#8F6414;
+  --brass-soft:#B08328;
+  --maxw:1180px;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E6EBE6;
+    --ink-soft:#BFCCC6;
+    --paper:#0F1A18;
+    --paper-2:#172523;
+    --rule:#2C3E3A;
+    --mute:#8FA39C;
+    --brass:#D9A845;
+    --brass-soft:#C29433;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E6EBE6;
+  --ink-soft:#BFCCC6;
+  --paper:#0F1A18;
+  --paper-2:#172523;
+  --rule:#2C3E3A;
+  --mute:#8FA39C;
+  --brass:#D9A845;
+  --brass-soft:#C29433;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 24px)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.shell{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 28px;
+  display:grid;
+  grid-template-columns:216px minmax(0,1fr);
+  gap:0 64px;
+  align-items:start;
+}
+
+/* ---------- spine ---------- */
+.spine{
+  position:sticky;
+  top:calc(env(safe-area-inset-top,0px) + 44px);
+  padding:44px 0 0;
+}
+.spine .mark{
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:700;
+  font-size:26px;
+  line-height:1.08;
+  letter-spacing:-0.01em;
+  margin:0 0 10px;
+}
+.spine .who{
+  font-size:14px;
+  color:var(--mute);
+  line-height:1.5;
+  margin:0 0 26px;
+  padding-bottom:22px;
+  border-bottom:1px solid var(--rule);
+}
+.spine nav{display:flex;flex-direction:column;gap:9px;font-size:14px}
+.spine nav a{
+  text-decoration:none;
+  color:var(--mute);
+  border-left:2px solid transparent;
+  padding-left:11px;
+  margin-left:-13px;
+  transition:color .15s, border-color .15s;
+}
+.spine nav a:hover,.spine nav a:focus-visible{color:var(--ink);border-left-color:var(--brass)}
+.spine .avail{
+  margin-top:26px;
+  padding-top:20px;
+  border-top:1px solid var(--rule);
+  font-size:13.5px;
+  color:var(--mute);
+  line-height:1.55;
+}
+.spine .avail strong{color:var(--ink);font-weight:600;display:block;margin-bottom:3px}
+
+/* ---------- main ---------- */
+main{padding:44px 0 90px;min-width:0}
+
+.hero{padding:22px 0 8px}
+.hero h1{
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:600;
+  font-size:clamp(35px,5.4vw,60px);
+  line-height:1.04;
+  letter-spacing:-0.022em;
+  margin:0 0 22px;
+  max-width:19ch;
+}
+.hero p{
+  font-size:19px;
+  line-height:1.6;
+  color:var(--ink-soft);
+  max-width:60ch;
+  margin:0 0 16px;
+}
+.hero p.second{font-size:17px;color:var(--mute);max-width:64ch}
+
+.figures{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  margin:40px 0 0;
+}
+.figures div{padding:20px 20px 20px 0;border-right:1px solid var(--rule)}
+.figures div:last-child{border-right:none;padding-right:0}
+.figures b{
+  display:block;
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:600;
+  font-size:31px;
+  line-height:1;
+  letter-spacing:-0.015em;
+  font-variant-numeric:tabular-nums;
+  margin-bottom:7px;
+}
+.figures span{font-size:13.5px;color:var(--mute);line-height:1.42;display:block}
+
+section{padding-top:78px}
+.sec-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:20px;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:9px;
+  margin-bottom:8px;
+}
+.sec-head h2{
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:600;
+  font-size:23px;
+  letter-spacing:-0.01em;
+  margin:0;
+}
+.sec-head .count{font-size:13.5px;color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---------- case entries ---------- */
+.case{
+  display:grid;
+  grid-template-columns:118px minmax(0,1fr);
+  gap:0 30px;
+  padding:34px 0;
+  border-bottom:1px solid var(--rule);
+}
+.case:last-of-type{border-bottom:none}
+.case .when{
+  font-size:13.5px;
+  color:var(--mute);
+  font-variant-numeric:tabular-nums;
+  line-height:1.45;
+  padding-top:6px;
+}
+.case .when em{display:block;font-style:normal;color:var(--brass);font-weight:600;margin-top:5px;font-size:13px}
+.case h3{
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:600;
+  font-size:26px;
+  letter-spacing:-0.012em;
+  margin:0 0 3px;
+  line-height:1.16;
+}
+.case .role{font-size:15px;color:var(--mute);margin:0 0 15px}
+.case .lede{font-size:16.5px;color:var(--ink-soft);margin:0 0 20px;max-width:66ch}
+
+.did{margin:0 0 22px;padding:0;list-style:none;max-width:70ch}
+.did li{
+  position:relative;
+  padding-left:19px;
+  margin-bottom:11px;
+  font-size:15.5px;
+  line-height:1.58;
+}
+.did li::before{
+  content:"";
+  position:absolute;
+  left:0;top:.68em;
+  width:7px;height:1.5px;
+  background:var(--brass);
+}
+.did li b{font-weight:600}
+
+.impact{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0;
+  background:var(--paper-2);
+  border-left:2px solid var(--brass);
+}
+.impact div{padding:13px 22px 13px 18px;border-right:1px solid var(--rule)}
+.impact div:last-child{border-right:none}
+.impact b{
+  display:block;
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:600;
+  font-size:22px;
+  line-height:1;
+  font-variant-numeric:tabular-nums;
+  margin-bottom:4px;
+}
+.impact span{font-size:12.5px;color:var(--mute);display:block;line-height:1.35}
+
+.stack{
+  font-size:13.5px;
+  color:var(--mute);
+  margin-top:18px;
+  line-height:1.6;
+  max-width:70ch;
+}
+
+/* ---------- earlier ---------- */
+.earlier{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.earlier article{
+  padding:24px 26px 24px 0;
+  border-bottom:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+}
+.earlier article:nth-child(2n){padding-right:0;padding-left:26px;border-right:none}
+.earlier article:nth-last-child(-n+2){border-bottom:none}
+.earlier h4{
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:600;
+  font-size:18px;
+  margin:0 0 2px;
+}
+.earlier .meta{font-size:13px;color:var(--mute);margin:0 0 9px;font-variant-numeric:tabular-nums}
+.earlier p{font-size:14.5px;margin:0;color:var(--ink-soft);line-height:1.55}
+
+/* ---------- capabilities ---------- */
+.caps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px}
+.caps section{padding-top:0}
+.caps > div{padding:22px 0;border-bottom:1px solid var(--rule)}
+.caps h4{
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:600;
+  font-size:16px;
+  margin:0 0 7px;
+}
+.caps p{margin:0;font-size:14.5px;color:var(--mute);line-height:1.62}
+
+/* ---------- contact ---------- */
+.contact{
+  margin-top:78px;
+  border-top:2px solid var(--ink);
+  padding-top:34px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:34px 56px;
+  align-items:flex-start;
+}
+.contact .pitch{max-width:40ch}
+.contact .pitch h2{
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-weight:600;
+  font-size:25px;
+  margin:0 0 9px;
+  letter-spacing:-0.01em;
+}
+.contact .pitch p{margin:0;color:var(--mute);font-size:15.5px}
+.contact dl{margin:0;display:grid;grid-template-columns:auto auto;gap:9px 22px;font-size:15.5px;align-content:start}
+.contact dt{color:var(--mute);font-size:14px;padding-top:1px}
+.contact dd{margin:0}
+.contact dd a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:1px}
+.contact dd a:hover,.contact dd a:focus-visible{color:var(--brass)}
+
+footer{
+  margin-top:62px;
+  padding-top:18px;
+  border-top:1px solid var(--rule);
+  font-size:13px;
+  color:var(--mute);
+}
+
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+/* ---------- responsive ---------- */
+@media (max-width:920px){
+  .shell{grid-template-columns:1fr;gap:0}
+  .spine{position:static;padding:34px 0 0}
+  .spine .who{margin-bottom:18px;padding-bottom:16px}
+  .spine nav{flex-direction:row;flex-wrap:wrap;gap:8px 20px}
+  .spine nav a{margin-left:0;padding-left:0;border-left:none;border-bottom:2px solid transparent}
+  .spine nav a:hover,.spine nav a:focus-visible{border-left-color:transparent;border-bottom-color:var(--brass)}
+  .spine .avail{margin-top:18px;padding-top:16px}
+  main{padding-top:14px}
+  .figures{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .figures div{padding:16px 16px 16px 0}
+  .figures div:nth-child(2n){border-right:none;padding-right:0}
+  .figures div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+  .caps{grid-template-columns:1fr;gap:0}
+}
+@media (max-width:660px){
+  body{font-size:16px}
+  .shell{padding:0 20px}
+  .case{grid-template-columns:1fr;gap:0}
+  .case .when{padding-top:0;margin-bottom:10px}
+  .case .when em{display:inline;margin-left:10px}
+  .impact div{padding:11px 16px 11px 14px;flex:1 1 auto;min-width:118px}
+  .earlier{grid-template-columns:1fr}
+  .earlier article,.earlier article:nth-child(2n){
+    padding:20px 0;border-right:none;border-bottom:1px solid var(--rule);
+  }
+  .earlier article:last-child{border-bottom:none}
+  .contact{gap:28px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="spine">
+    <p class="mark">Ahmed<br>Borham</p>
+    <p class="who">Engineering leader<br>Jeddah, Saudi Arabia</p>
+    <nav>
+      <a href="#work">Selected work</a>
+      <a href="#earlier">Earlier</a>
+      <a href="#capabilities">What I do</a>
+      <a href="#contact">Get in touch</a>
+    </nav>
+    <p class="avail">
+      <strong>Open to new roles</strong>
+      CTO, Head of Engineering, or senior technical leadership in the Gulf.
+    </p>
+  </aside>
+
+  <main>
+
+    <header class="hero">
+      <h1>I build the systems that have to stay up.</h1>
+      <p>Ten years leading engineering across on-demand delivery, health tech, and SaaS. Dispatch platforms moving live fleets across a city, health platforms handling regulated data, and the infrastructure underneath both.</p>
+      <p class="second">Most recently CTO at 1Pass. Before that, engineering lead on the customer and driver apps at HungerStation while it scaled across Saudi Arabia.</p>
+
+      <div class="figures">
+        <div><b>10+ yrs</b><span>Engineering leadership</span></div>
+        <div><b>99.9%</b><span>Uptime held through 10x growth</span></div>
+        <div><b>30%</b><span>Infrastructure cost reduction</span></div>
+        <div><b>3</b><span>Sectors: delivery, health, SaaS</span></div>
+      </div>
+    </header>
+
+    <section id="work">
+      <div class="sec-head">
+        <h2>Selected work</h2>
+        <span class="count">2013&ndash;present</span>
+      </div>
+
+      <article class="case">
+        <div class="when">2019&ndash;2026<em>Jeddah</em></div>
+        <div>
+          <h3>1Pass</h3>
+          <p class="role">Chief Technology Officer &middot; Health and wellness platform</p>
+          <p class="lede">I owned technology for the whole company. The work that mattered most was not a feature launch, it was making the platform something a regulated partner could safely do business with.</p>
+          <ul class="did">
+            <li>Led a full <b>security and privacy compliance overhaul</b> after a partner's due diligence review flagged gaps. Built breach notification and incident response procedures, ROPA and DSAR processes, privileged access hardening, and an in-region backup strategy against PDPL, Saudi NCA, and GDPR requirements.</li>
+            <li>Designed a <b>four layer defence in depth architecture</b> across perimeter, authentication and RBAC, application validation, and tenant-scoped data access, closing unauthenticated public API endpoints.</li>
+            <li>Scaled infrastructure on <b>GCP me-central2 (Dammam)</b> to support ten times the user load without dropping the uptime SLA.</li>
+            <li>Rebuilt the <b>native Android and iOS apps</b> from scratch, and the company website in Vue.js.</li>
+            <li>Ran a formal technology evaluation process, assessing more than twenty tools a year and approving only what cleared a 150 percent ROI bar.</li>
+          </ul>
+          <div class="impact">
+            <div><b>10x</b><span>User growth absorbed</span></div>
+            <div><b>99.9%</b><span>Uptime SLA held</span></div>
+            <div><b>&minus;30%</b><span>Infrastructure cost</span></div>
+            <div><b>&minus;40%</b><span>Security incidents</span></div>
+            <div><b>&minus;30%</b><span>Mobile crash rate</span></div>
+            <div><b>+18%</b><span>Active users</span></div>
+          </div>
+          <p class="stack">GCP &middot; Kubernetes &middot; Docker &middot; Vue.js &middot; Kotlin &middot; Swift &middot; PostgreSQL &middot; Redis &middot; PDPL / GDPR / NCA</p>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="when">2016&ndash;2019<em>Jeddah</em></div>
+        <div>
+          <h3>HungerStation</h3>
+          <p class="role">Software Engineer Lead &middot; On-demand food delivery</p>
+          <p class="lede">I led engineering across both sides of the marketplace during the years the platform was growing fast across Saudi Arabia. The customer app people ordered from, and the driver system that actually got the food there.</p>
+          <ul class="did">
+            <li>Built the <b>delivery zone admin</b> on PostgreSQL and PostGIS, defining how zones were drawn on the map and the rules for matching incoming orders to available drivers inside each zone.</li>
+            <li>Built the <b>driver application (PACE)</b> from the ground up, covering order assignment, live location updates, and delivery status for the whole rider fleet.</li>
+            <li>Built the <b>rider operations dashboard</b> that gave the ops team live visibility into driver position, assignment, and delivery progress during peak demand.</li>
+            <li>Led the <b>customer app rebuild</b> in React and Redux, including the full checkout and payment gateway flow through to real-time order tracking.</li>
+            <li>Built and evolved the customer API powering restaurant discovery, ordering, and order status, containerised and deployed on Kubernetes with Jenkins.</li>
+          </ul>
+          <div class="impact">
+            <div><b>3 apps</b><span>Customer, driver, restaurant</span></div>
+            <div><b>City-wide</b><span>Live fleet dispatch</span></div>
+            <div><b>Real time</b><span>Geospatial order matching</span></div>
+          </div>
+          <p class="stack">Ruby on Rails &middot; PostgreSQL &middot; PostGIS &middot; Redis &middot; GraphQL &middot; Sidekiq &middot; React &middot; Redux &middot; Vue.js &middot; Socket.IO &middot; Firebase &middot; Kubernetes &middot; Jenkins</p>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="when">2026&ndash;now<em>Side venture</em></div>
+        <div>
+          <h3>MailsGuard</h3>
+          <p class="role">Founder &middot; Email verification SaaS</p>
+          <p class="lede">I wanted to know whether I could take something from an idea to paying users on my own, so I built one. It competes with ZeroBounce and NeverBounce at a considerably lower price.</p>
+          <ul class="did">
+            <li>Architected and built the whole platform solo: a Turborepo monorepo, a Fastify API on Railway, and a Next.js dashboard on Vercel.</li>
+            <li>Built the <b>data enrichment integration layer</b> covering domain search, person enrichment, and bulk enrichment, with rate limit protection and graceful retry handling.</li>
+            <li>Built a background queue for CSV enrichment, an admin panel, billing and refunds, product analytics, and a referral system.</li>
+            <li>Took it through a public launch, then <b>automated operations</b> to the point where it now runs with very little ongoing attention.</li>
+          </ul>
+          <div class="impact">
+            <div><b>Solo</b><span>Product, engineering, launch</span></div>
+            <div><b>Automated</b><span>Runs without daily input</span></div>
+          </div>
+          <p class="stack">Fastify &middot; Next.js &middot; TypeScript &middot; BullMQ &middot; Turborepo &middot; Railway &middot; Vercel &middot; PostHog</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="earlier">
+      <div class="sec-head">
+        <h2>Earlier</h2>
+        <span class="count">2013&ndash;2016</span>
+      </div>
+      <div class="earlier">
+        <article>
+          <h4>IntelliSC</h4>
+          <p class="meta">Senior Software Engineer &middot; Cairo &middot; 2016</p>
+          <p>A banking application on IBM Worklight, and CarGate, which integrated vehicle records with a government traffic department and added a parts marketplace on top.</p>
+        </article>
+        <article>
+          <h4>302Labs</h4>
+          <p class="meta">Senior Full Stack Engineer &middot; Cairo &middot; 2015&ndash;2016</p>
+          <p>A health and accident alert platform that read live heart rate data from wearable devices and a Samsung Watch app, with a Rails backend and Android integration.</p>
+        </article>
+        <article>
+          <h4>Kacib Solutions</h4>
+          <p class="meta">Team Lead Software Engineer &middot; Cairo &middot; 2014&ndash;2015</p>
+          <p>My first time leading a team. Delivered a charity SMS platform and a school portal on Laravel, and learned that coaching people is a different skill from writing code.</p>
+        </article>
+        <article>
+          <h4>Out of Z Box</h4>
+          <p class="meta">Web Developer &middot; Cairo &middot; 2013&ndash;2014</p>
+          <p>Front-end and back-end web work for clients, building custom applications and the company's own site.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="sec-head">
+        <h2>What I do</h2>
+      </div>
+      <div class="caps">
+        <div>
+          <h4>Platform and infrastructure</h4>
+          <p>Cloud architecture on GCP, containerised deployment with Docker and Kubernetes, CI/CD pipelines, cost optimisation, and holding uptime commitments through real growth.</p>
+        </div>
+        <div>
+          <h4>Security and compliance</h4>
+          <p>PDPL, GDPR, and Saudi NCA cloud controls. Layered security architecture, RBAC, data residency, breach notification and incident response, ROPA and DSAR processes.</p>
+        </div>
+        <div>
+          <h4>Real-time and geospatial systems</h4>
+          <p>PostGIS zone modelling, order-to-driver matching, live dispatch, and the operational tooling teams need to run a fleet while it is moving.</p>
+        </div>
+        <div>
+          <h4>Backend engineering</h4>
+          <p>Ruby on Rails, Node and Fastify, PostgreSQL, Redis, GraphQL. API design, background job processing, and database work that holds up under load.</p>
+        </div>
+        <div>
+          <h4>Frontend and mobile</h4>
+          <p>React, Redux, Vue.js, Next.js, and native Android and iOS. Leading rebuilds of live products without breaking the people already using them.</p>
+        </div>
+        <div>
+          <h4>Leading engineers</h4>
+          <p>Hiring, mentoring, and coaching engineers on architecture and design. Running delivery across cross-functional teams and translating technical trade-offs for people who are not engineers.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact" id="contact">
+      <div class="pitch">
+        <h2>Get in touch</h2>
+        <p>I'm looking for my next role in Saudi Arabia or the wider Gulf. Happy to talk if something here lines up with what you're building.</p>
+      </div>
+      <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:aborham83@gmail.com">aborham83@gmail.com</a></dd>
+        <dt>Phone</dt>
+        <dd><a href="tel:+966567202382">+966 56 720 2382</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/ahmedborham" target="_blank" rel="noopener">linkedin.com/in/ahmedborham</a></dd>
+        <dt>Based in</dt>
+        <dd>Jeddah, Saudi Arabia</dd>
+      </dl>
+    </div>
+
+    <footer>
+      Ahmed Borham &middot; Engineering leader &middot; Arabic and English
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>
