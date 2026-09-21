@@ -364,14 +364,14 @@ footer{
 
     <header class="hero">
       <h1>I build the systems that have to stay up.</h1>
-      <p>Ten years leading engineering across on-demand delivery, health tech, and SaaS. Dispatch platforms moving live fleets across a city, health platforms handling regulated data, and the infrastructure underneath both.</p>
+      <p>Ten years leading engineering across on-demand delivery, health tech, fintech, and SaaS. Dispatch platforms moving live fleets across a city, payment systems moving money reliably, health platforms handling regulated data, and the infrastructure underneath all of it.</p>
       <p class="second">Most recently CTO at 1Pass. Before that, engineering lead on the customer and driver apps at HungerStation while it scaled across Saudi Arabia.</p>
 
       <div class="figures">
         <div><b>10+ yrs</b><span>Engineering leadership</span></div>
         <div><b>99.9%</b><span>Uptime held through 10x growth</span></div>
         <div><b>30%</b><span>Infrastructure cost reduction</span></div>
-        <div><b>3</b><span>Sectors: delivery, health, SaaS</span></div>
+        <div><b>4</b><span>Sectors: delivery, health, fintech, SaaS</span></div>
       </div>
     </header>
 
@@ -411,25 +411,28 @@ footer{
         <div>
           <h3>HungerStation</h3>
           <p class="role">Software Engineer Lead &middot; On-demand food delivery</p>
-          <p class="lede">I led engineering across both sides of the marketplace during the years the platform was growing fast across Saudi Arabia. The customer app people ordered from, and the driver system that actually got the food there.</p>
+          <p class="lede">I led engineering across both sides of the marketplace during the years the platform was growing fast across Saudi Arabia. The customer app people ordered from, the driver system that actually got the food there, and the payments running underneath both.</p>
           <ul class="did">
             <li>Built the <b>delivery zone admin</b> on PostgreSQL and PostGIS, defining how zones were drawn on the map and the rules for matching incoming orders to available drivers inside each zone.</li>
             <li>Built the <b>driver application (PACE)</b> from the ground up, covering order assignment, live location updates, and delivery status for the whole rider fleet.</li>
             <li>Built the <b>rider operations dashboard</b> that gave the ops team live visibility into driver position, assignment, and delivery progress during peak demand.</li>
             <li>Led the <b>customer app rebuild</b> in React and Redux, including the full checkout and payment gateway flow through to real-time order tracking.</li>
+            <li>Worked on the <b>payments team</b>, building backend services for the wallet and checkout system: integrating Checkout.com as the primary PSP alongside Tabby and Tamara for buy-now-pay-later, with idempotent transaction processing to prevent double-charging, provider webhook handling, and reconciliation against a high volume of daily transactions.</li>
             <li>Built and evolved the customer API powering restaurant discovery, ordering, and order status, containerised and deployed on Kubernetes with Jenkins.</li>
           </ul>
           <div class="impact">
             <div><b>3 apps</b><span>Customer, driver, restaurant</span></div>
             <div><b>City-wide</b><span>Live fleet dispatch</span></div>
             <div><b>Real time</b><span>Geospatial order matching</span></div>
+            <div><b>PSP + BNPL</b><span>Checkout.com, Tabby, Tamara</span></div>
           </div>
-          <p class="stack">Ruby on Rails &middot; PostgreSQL &middot; PostGIS &middot; Redis &middot; GraphQL &middot; Sidekiq &middot; React &middot; Redux &middot; Vue.js &middot; Socket.IO &middot; Firebase &middot; Kubernetes &middot; Jenkins</p>
+          <p class="stack">Ruby on Rails &middot; PostgreSQL &middot; PostGIS &middot; Redis &middot; GraphQL &middot; Sidekiq &middot; React &middot; Redux &middot; Vue.js &middot; Socket.IO &middot; Firebase &middot; Kubernetes &middot; Jenkins &middot; Checkout.com &middot; Tabby &middot; Tamara</p>
         </div>
       </article>
 
       <article class="case">
         <div class="when">2026&ndash;now<em>Side venture</em></div>
+
         <div>
           <h3>MailsGuard</h3>
           <p class="role">Founder &middot; Email verification SaaS</p>
@@ -490,6 +493,10 @@ footer{
         <div>
           <h4>Security and compliance</h4>
           <p>PDPL, GDPR, and Saudi NCA cloud controls. Layered security architecture, RBAC, data residency, breach notification and incident response, ROPA and DSAR processes.</p>
+        </div>
+        <div>
+          <h4>Payments and fintech</h4>
+          <p>Backend integration with PSPs and BNPL providers including Checkout.com, Tabby, and Tamara. Idempotent transaction processing, webhook handling, and reconciliation at high transaction volume.</p>
         </div>
         <div>
           <h4>Real-time and geospatial systems</h4>
